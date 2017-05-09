@@ -23,7 +23,7 @@ class Function1Tests {
         try {
             spy.verify.times(once).withArgs("1")
         } catch (ae: AssertionError) {
-            Assert.assertEquals("Expected call matching (1) once", ae.message)
+            Assert.assertEquals("Expected call matching (\"1\") once", ae.message)
             return
         }
         Assert.fail("Expected verification to thrown an exception")

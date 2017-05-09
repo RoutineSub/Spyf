@@ -30,7 +30,7 @@ class InOrderTests {
                 spy.verify.withArgs("1")
             }
         } catch (ae: AssertionError) {
-            Assert.assertEquals("Expected call matching (1) at least once", ae.message)
+            Assert.assertEquals("Expected call matching (\"1\") at least once", ae.message)
             return
         }
         Assert.fail("Expected inOrder.verify to throw an assertion error")
@@ -72,7 +72,7 @@ class InOrderTests {
                 spy2.verify.times(1).withArgs("test", 3)
             }
         } catch (ae: AssertionError) {
-            Assert.assertEquals("Expected call matching (test,3) at least 1 time", ae.message)
+            Assert.assertEquals("Expected call matching (\"test\",3) at least 1 time", ae.message)
             return
         }
         Assert.fail("Expected in order verification to have failed.")

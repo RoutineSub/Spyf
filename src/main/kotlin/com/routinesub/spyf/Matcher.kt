@@ -25,7 +25,7 @@ object `is` {
 fun <T> eq(value: T) : Matcher<T> = object: Matcher<T> {
     override val describe: String
         get() = when(value) {
-            is String -> "\"$value\""
+            is CharSequence -> "\"$value\""
             else -> value.toString()
         }
 
